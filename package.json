@@ -26,10 +26,6 @@
     "url": "https://github.com/arempe93/slate-mentions-plugin/issues"
   },
   "homepage": "https://github.com/arempe93/slate-mentions-plugin",
-  "dependencies": {
-    "prop-types": "^15.5.8",
-    "tether": "^1.4.0"
-  },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
@@ -51,9 +47,8 @@
     "postcss-loader": "^0.13.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",
-    "react-motion": "^0.4.2",
-    "react-motion-ui-pack": "^0.6.0",
     "sass-loader": "^4.0.2",
+    "slate": "^0.21.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.9.0"

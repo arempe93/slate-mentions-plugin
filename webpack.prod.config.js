@@ -15,25 +15,19 @@ var externals = {
     commonjs2: 'react-dom',
     commonjs: 'react-dom',
     amd: 'react-dom'
-  },
-  'tether': {
-    root: 'Tether',
-    commonjs2: 'tether',
-    commonjs: 'tether',
-    amd: 'tether'
   }
 };
 
 var config = {
   entry: {
-    index: './src/react-tether.js',
+    index: './src/index.js',
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: 'dist/',
-    filename: 'react-tether.js',
-    sourceMapFilename: 'react-tether.sourcemap.js',
-    library: 'TetherComponent',
+    filename: 'index.js',
+    sourceMapFilename: 'slate-mentions-plugin.sourcemap.js',
+    library: 'SlateMentionsPlugin',
     libraryTarget: 'umd'
   },
   module: {
@@ -51,14 +45,14 @@ var config = {
 };
 
 if (TARGET === 'minify') {
-  config.output.filename = 'react-tether.min.js';
-  config.output.sourceMapFilename = 'react-tether.min.js';
+  config.output.filename = 'slate-mentions-plugin.min.js';
+  config.output.sourceMapFilename = 'slate-mentions-plugin.min.js';
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
     },
     mangle: {
-      except: ['React', 'ReactDOM', 'Tether', 'TetherComponent']
+      except: ['React', 'ReactDOM']
     }
   }));
 }
